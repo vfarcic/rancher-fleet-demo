@@ -6,5 +6,7 @@ metadata:
   namespace: fleet-local
 spec:
   repo: https://github.com/vfarcic/rancher-fleet-demo
+  branch: main
+  targetNamespace: production
   paths:
   - my-app/overlays/production
