@@ -14,3 +14,5 @@ spec:
     clusterSelector:
       matchLabels:
         env: dev
+  - name: production
+    clusterGroup: production
