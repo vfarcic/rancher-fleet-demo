@@ -13,7 +13,7 @@ targetCustomizations:
   helm:
     values:
       image:
-        tag: 4.0.0
+        tag: 2.7.0
   clusterSelector:
     matchLabels:
       env: production
