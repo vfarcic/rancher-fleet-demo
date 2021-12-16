@@ -1,2 +1,3 @@
 /ca.pem
 /values.yaml
+/kubeconfig*.yaml

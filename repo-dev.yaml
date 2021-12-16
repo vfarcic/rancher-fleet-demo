@@ -2,10 +2,15 @@ apiVersion: fleet.cattle.io/v1alpha1
 kind: GitRepo
 metadata:
   name: devops-toolkit
-  namespace: fleet-local
+  namespace: clusters
 spec:
   repo: https://github.com/vfarcic/rancher-fleet-demo
   branch: main
-  targetNamespace: production
+  targetNamespace: default
   paths:
   - helm
+  targets:
+  - name: dev
+    clusterSelector:
+      matchLabels:
+        env: dev
