@@ -1,5 +1,5 @@
 helm:
-  chart: "./xxx"
+  chart: "./"
   values:
     image:
       tag: 2.7.0
