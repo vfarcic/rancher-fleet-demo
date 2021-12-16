@@ -1,6 +1,6 @@
 image:
   repository: vfarcic/devops-toolkit-series
-  tag: 2.7.0
+  tag: latest
   pullPolicy: IfNotPresent
 ingress:
   enabled: true
