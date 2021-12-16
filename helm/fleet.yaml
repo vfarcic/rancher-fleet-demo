@@ -1,0 +1,9 @@
+targetCustomizations:
+- name: dev
+  helm:
+    chart: "."
+    values:
+      image.tag: 2.7.0
+  clusterSelector:
+    matchLabels:
+      env: dev
