@@ -9,4 +9,4 @@ spec:
   branch: main
   targetNamespace: production
   paths:
-  - my-app/base
+  - kustomize/base
