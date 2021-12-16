@@ -1,0 +1,6 @@
+kind: ClusterRegistrationToken
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: token
+spec:
+  ttl: 24h
