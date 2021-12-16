@@ -1,14 +1,14 @@
-helm:
-  chart: "./"
-  values:
-    image:
-      tag: 2.7.0
-# targetCustomizations:
-# - name: dev
-#   helm:
-#     chart: "."
-#     values:
-#       image.tag: 2.7.0
-#   clusterSelector:
-#     matchLabels:
-#       env: dev
+# helm:
+#   chart: "./"
+#   values:
+#     image:
+#       tag: 2.7.0
+targetCustomizations:
+- name: dev
+  helm:
+    chart: "./"
+    values:
+      image.tag: 2.7.1
+  clusterSelector:
+    matchLabels:
+      env: dev
