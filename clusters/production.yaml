@@ -1,0 +1,11 @@
+apiVersion: devopstoolkitseries.com/v1alpha1
+kind: CompositeCluster
+metadata:
+  name: production
+spec:
+  id: production
+  compositionRef:
+    name: cluster-aws
+  parameters:
+    nodeSize: small
+    minNodeCount: 3

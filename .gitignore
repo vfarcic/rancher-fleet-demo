@@ -1,3 +1,5 @@
 /ca.pem
 /values.yaml
 /kubeconfig*.yaml
+/creds
+/aws-creds.conf
