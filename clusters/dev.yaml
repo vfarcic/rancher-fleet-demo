@@ -1,9 +1,9 @@
 apiVersion: devopstoolkitseries.com/v1alpha1
 kind: CompositeCluster
 metadata:
-  name: staging
+  name: dev
 spec:
-  id: staging
+  id: dev
   compositionRef:
     name: cluster-civo
   parameters:

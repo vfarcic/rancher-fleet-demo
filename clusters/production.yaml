@@ -5,7 +5,7 @@ metadata:
 spec:
   id: production
   compositionRef:
-    name: cluster-aws
+    name: cluster-civo
   parameters:
     nodeSize: small
     minNodeCount: 3
