@@ -1,16 +1,16 @@
----
+# ---
 
-apiVersion: devopstoolkitseries.com/v1alpha1
-kind: CompositeCluster
-metadata:
-  name: staging
-spec:
-  id: staging
-  compositionRef:
-    name: cluster-civo
-  parameters:
-    nodeSize: medium
-    minNodeCount: 3
+# apiVersion: devopstoolkitseries.com/v1alpha1
+# kind: CompositeCluster
+# metadata:
+#   name: staging
+# spec:
+#   id: staging
+#   compositionRef:
+#     name: cluster-civo
+#   parameters:
+#     nodeSize: medium
+#     minNodeCount: 3
 
 ---
 
