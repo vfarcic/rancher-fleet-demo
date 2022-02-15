@@ -1,16 +1,30 @@
+# ---
+
+# apiVersion: devopstoolkitseries.com/v1alpha1
+# kind: CompositeCluster
+# metadata:
+#   name: dev
+# spec:
+#   id: dev
+#   compositionRef:
+#     name: cluster-civo
+#   parameters:
+#     nodeSize: medium
+#     minNodeCount: 3
+
 ---
 
 apiVersion: devopstoolkitseries.com/v1alpha1
-kind: CompositeCluster
+kind: ClusterClaim
 metadata:
   name: dev
 spec:
   id: dev
-  compositionRef:
-    name: cluster-civo
+  compositionSelector:
+    provider: civo
+    cluster: ck
   parameters:
     nodeSize: medium
     minNodeCount: 3
   writeConnectionSecretToRef:
     name: cluster-dev
-    namespace: cluster
