@@ -9,5 +9,8 @@ spec:
   compositionRef:
     name: cluster-civo
   parameters:
-    nodeSize: small
+    nodeSize: medium
     minNodeCount: 3
+  writeConnectionSecretToRef:
+    name: cluster-dev
+    namespace: cluster
