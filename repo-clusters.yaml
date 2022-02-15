@@ -6,6 +6,5 @@ metadata:
 spec:
   repo: https://github.com/vfarcic/rancher-fleet-demo
   branch: main
-  targetNamespace: clusters
   paths:
   - clusters
