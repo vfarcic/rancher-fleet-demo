@@ -1,17 +1,3 @@
-# ---
-
-# apiVersion: devopstoolkitseries.com/v1alpha1
-# kind: CompositeCluster
-# metadata:
-#   name: production
-# spec:
-#   id: production
-#   compositionRef:
-#     name: cluster-civo
-#   parameters:
-#     nodeSize: medium
-#     minNodeCount: 3
-
 ---
 
 apiVersion: devopstoolkitseries.com/v1alpha1
@@ -29,4 +15,4 @@ spec:
     nodeSize: medium
     minNodeCount: 3
   writeConnectionSecretToRef:
-    name: cluster-dev
+    name: cluster-production

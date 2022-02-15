@@ -1,17 +1,3 @@
-# ---
-
-# apiVersion: devopstoolkitseries.com/v1alpha1
-# kind: CompositeCluster
-# metadata:
-#   name: dev
-# spec:
-#   id: dev
-#   compositionRef:
-#     name: cluster-civo
-#   parameters:
-#     nodeSize: medium
-#     minNodeCount: 3
-
 ---
 
 apiVersion: devopstoolkitseries.com/v1alpha1
