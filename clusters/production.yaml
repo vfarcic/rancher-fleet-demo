@@ -3,16 +3,75 @@
 apiVersion: devopstoolkitseries.com/v1alpha1
 kind: ClusterClaim
 metadata:
-  name: production
-  namespace: cluster
+  name: production-01
+  namespace: clusters
 spec:
-  id: production
+  id: production-01
   compositionSelector:
     matchLabels:
-      provider: civo
-      cluster: ck
+      provider: aws
+      cluster: eks
   parameters:
     nodeSize: medium
     minNodeCount: 3
   writeConnectionSecretToRef:
-    name: cluster-production
+    name: cluster-production-01
+
+---
+
+apiVersion: devopstoolkitseries.com/v1alpha1
+kind: GitOpsClaim
+metadata:
+  name: production
+  namespace: clusters
+spec:
+  id: production
+  compositionSelector:
+    matchLabels:
+      provider: fleet
+      initiate-by: manager
+  parameters:
+    kubeConfig:
+      secretName: cluster-production-01
+      secretNamespace: clusters
+    environment: production
+    gitOpsRepo: https://github.com/vfarcic/devops-toolkit-crossplane.git
+
+---
+
+apiVersion: devopstoolkitseries.com/v1alpha1
+kind: ClusterClaim
+metadata:
+  name: production-02
+  namespace: clusters
+spec:
+  id: production-02
+  compositionSelector:
+    matchLabels:
+      provider: aws
+      cluster: eks
+  parameters:
+    nodeSize: medium
+    minNodeCount: 3
+  writeConnectionSecretToRef:
+    name: cluster-production-02
+
+---
+
+apiVersion: devopstoolkitseries.com/v1alpha1
+kind: GitOpsClaim
+metadata:
+  name: production
+  namespace: clusters
+spec:
+  id: production
+  compositionSelector:
+    matchLabels:
+      provider: fleet
+      initiate-by: manager
+  parameters:
+    kubeConfig:
+      secretName: cluster-production-02
+      secretNamespace: clusters
+    environment: production
+    gitOpsRepo: https://github.com/vfarcic/devops-toolkit-crossplane.git
