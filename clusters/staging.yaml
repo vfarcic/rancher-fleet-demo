@@ -1,0 +1,32 @@
+---
+
+apiVersion: devopstoolkitseries.com/v1alpha1
+kind: CompositeCluster
+metadata:
+  name: staging
+spec:
+  id: staging
+  compositionRef:
+    name: cluster-civo
+  parameters:
+    nodeSize: medium
+    minNodeCount: 3
+
+---
+
+apiVersion: devopstoolkitseries.com/v1alpha1
+kind: ClusterClaim
+metadata:
+  name: staging
+  namespace: cluster
+spec:
+  id: staging
+  compositionSelector:
+    matchLabels:
+      provider: civo
+      cluster: ck
+  parameters:
+    nodeSize: medium
+    minNodeCount: 3
+  writeConnectionSecretToRef:
+    name: cluster-dev
