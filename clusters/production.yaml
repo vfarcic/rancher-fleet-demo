@@ -25,7 +25,7 @@ metadata:
   name: production
   namespace: clusters
 spec:
-  id: production
+  id: production-01
   compositionSelector:
     matchLabels:
       provider: fleet
@@ -64,7 +64,7 @@ metadata:
   name: production
   namespace: clusters
 spec:
-  id: production
+  id: production-02
   compositionSelector:
     matchLabels:
       provider: fleet
