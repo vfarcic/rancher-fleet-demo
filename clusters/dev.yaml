@@ -22,8 +22,9 @@ metadata:
 spec:
   id: dev
   compositionSelector:
-    provider: civo
-    cluster: ck
+    matchLabels:
+      provider: civo
+      cluster: ck
   parameters:
     nodeSize: medium
     minNodeCount: 3
