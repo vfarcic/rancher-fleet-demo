@@ -6,6 +6,8 @@ targetCustomizations:
     values:
       image:
         tag: 2.7.0
+      ingress:
+        host: dev.devopstoolkitseries.com
   clusterSelector:
     matchLabels:
       env: dev
@@ -14,6 +16,8 @@ targetCustomizations:
     values:
       image:
         tag: 2.7.0
+      ingress:
+        host: staging.devopstoolkitseries.com
   clusterSelector:
     matchLabels:
       env: staging
@@ -22,6 +26,8 @@ targetCustomizations:
     values:
       image:
         tag: 2.7.0
+      ingress:
+        host: devopstoolkitseries.com
   clusterSelector:
     matchLabels:
       env: production
