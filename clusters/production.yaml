@@ -22,7 +22,7 @@ spec:
 apiVersion: devopstoolkitseries.com/v1alpha1
 kind: GitOpsClaim
 metadata:
-  name: production
+  name: production-01
   namespace: clusters
 spec:
   id: production-01
@@ -61,7 +61,7 @@ spec:
 apiVersion: devopstoolkitseries.com/v1alpha1
 kind: GitOpsClaim
 metadata:
-  name: production
+  name: production-02
   namespace: clusters
 spec:
   id: production-02
