@@ -13,6 +13,6 @@ spec:
       cluster: eks
   parameters:
     nodeSize: medium
-    minNodeCount: 1
+    minNodeCount: 2
   writeConnectionSecretToRef:
     name: cluster-dev
