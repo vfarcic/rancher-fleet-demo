@@ -16,23 +16,3 @@ spec:
     minNodeCount: 1
   writeConnectionSecretToRef:
     name: cluster-staging
-
----
-
-apiVersion: devopstoolkitseries.com/v1alpha1
-kind: GitOpsClaim
-metadata:
-  name: staging
-  namespace: clusters
-spec:
-  id: staging
-  compositionSelector:
-    matchLabels:
-      provider: fleet
-      initiate-by: manager
-  parameters:
-    kubeConfig:
-      secretName: cluster-staging
-      secretNamespace: clusters
-    environment: staging
-    gitOpsRepo: https://github.com/vfarcic/devops-toolkit-crossplane.git

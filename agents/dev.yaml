@@ -3,35 +3,36 @@
 apiVersion: devopstoolkitseries.com/v1alpha1
 kind: ClusterClaim
 metadata:
-  name: production-01
+  name: dev
   namespace: clusters
 spec:
-  id: production-01
+  id: dev
   compositionSelector:
     matchLabels:
       provider: aws
       cluster: eks
   parameters:
     nodeSize: medium
-    minNodeCount: 3
+    minNodeCount: 1
   writeConnectionSecretToRef:
-    name: cluster-production-01
+    name: cluster-dev
 
 ---
 
 apiVersion: devopstoolkitseries.com/v1alpha1
-kind: ClusterClaim
+kind: GitOpsClaim
 metadata:
-  name: production-02
+  name: dev
   namespace: clusters
 spec:
-  id: production-02
+  id: dev
   compositionSelector:
     matchLabels:
-      provider: aws
-      cluster: eks
+      provider: fleet
+      initiate-by: manager
   parameters:
-    nodeSize: medium
-    minNodeCount: 3
-  writeConnectionSecretToRef:
-    name: cluster-production-02
+    kubeConfig:
+      secretName: cluster-dev
+      secretNamespace: clusters
+    environment: dev
+    gitOpsRepo: https://github.com/vfarcic/devops-toolkit-crossplane.git
