@@ -1,28 +1,9 @@
 ---
 
 apiVersion: devopstoolkitseries.com/v1alpha1
-kind: ClusterClaim
-metadata:
-  name: production-01
-  namespace: clusters
-spec:
-  id: production-01
-  compositionSelector:
-    matchLabels:
-      provider: aws
-      cluster: eks
-  parameters:
-    nodeSize: medium
-    minNodeCount: 3
-  writeConnectionSecretToRef:
-    name: cluster-production-01
-
----
-
-apiVersion: devopstoolkitseries.com/v1alpha1
 kind: GitOpsClaim
 metadata:
-  name: production-01
+  name: production-01-agent
   namespace: clusters
 spec:
   id: production-01
@@ -40,28 +21,9 @@ spec:
 ---
 
 apiVersion: devopstoolkitseries.com/v1alpha1
-kind: ClusterClaim
-metadata:
-  name: production-02
-  namespace: clusters
-spec:
-  id: production-02
-  compositionSelector:
-    matchLabels:
-      provider: aws
-      cluster: eks
-  parameters:
-    nodeSize: medium
-    minNodeCount: 3
-  writeConnectionSecretToRef:
-    name: cluster-production-02
-
----
-
-apiVersion: devopstoolkitseries.com/v1alpha1
 kind: GitOpsClaim
 metadata:
-  name: production-02
+  name: production-02-agent
   namespace: clusters
 spec:
   id: production-02

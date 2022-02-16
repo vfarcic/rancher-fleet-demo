@@ -1,28 +1,9 @@
 ---
 
 apiVersion: devopstoolkitseries.com/v1alpha1
-kind: ClusterClaim
-metadata:
-  name: dev
-  namespace: clusters
-spec:
-  id: dev
-  compositionSelector:
-    matchLabels:
-      provider: aws
-      cluster: eks
-  parameters:
-    nodeSize: medium
-    minNodeCount: 1
-  writeConnectionSecretToRef:
-    name: cluster-dev
-
----
-
-apiVersion: devopstoolkitseries.com/v1alpha1
 kind: GitOpsClaim
 metadata:
-  name: dev
+  name: dev-agent
   namespace: clusters
 spec:
   id: dev

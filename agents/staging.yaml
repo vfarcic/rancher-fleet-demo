@@ -1,28 +1,9 @@
 ---
 
 apiVersion: devopstoolkitseries.com/v1alpha1
-kind: ClusterClaim
-metadata:
-  name: staging
-  namespace: clusters
-spec:
-  id: staging
-  compositionSelector:
-    matchLabels:
-      provider: aws
-      cluster: eks
-  parameters:
-    nodeSize: medium
-    minNodeCount: 1
-  writeConnectionSecretToRef:
-    name: cluster-staging
-
----
-
-apiVersion: devopstoolkitseries.com/v1alpha1
 kind: GitOpsClaim
 metadata:
-  name: staging
+  name: staging-agent
   namespace: clusters
 spec:
   id: staging
