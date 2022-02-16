@@ -3,3 +3,5 @@ image:
   tag: latest
 ingress:
   host: devopstoolkitseries.com
+db:
+  provider: aws

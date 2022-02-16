@@ -25,7 +25,7 @@ spec:
   id: {{ template "fullname" . }}
   compositionSelector:
     matchLabels:
-      provider: aws
+      provider: "{{ .Values.db.provider }}"
       db: postgresql
   parameters:
     version: "13.4"

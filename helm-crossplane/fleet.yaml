@@ -8,6 +8,8 @@ targetCustomizations:
         tag: 2.7.0
       ingress:
         host: dev.devopstoolkitseries.com
+      db:
+        provider: local-k8s
   clusterSelector:
     matchLabels:
       env: dev
@@ -18,6 +20,8 @@ targetCustomizations:
         tag: 2.7.0
       ingress:
         host: staging.devopstoolkitseries.com
+      db:
+        provider: local-k8s
   clusterSelector:
     matchLabels:
       env: staging
