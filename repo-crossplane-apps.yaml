@@ -13,9 +13,9 @@ spec:
     clusterSelector:
       matchLabels:
         env: dev
-  # - name: staging
-  #   clusterSelector:
-  #     matchLabels:
-  #       env: staging
-  # - name: production
-  #   clusterGroup: production
+  - name: staging
+    clusterSelector:
+      matchLabels:
+        env: staging
+  - name: production
+    clusterGroup: production
