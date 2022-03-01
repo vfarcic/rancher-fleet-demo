@@ -10,7 +10,7 @@ spec:
     matchLabels:
       type: backend-db
   parameters:
-    namespace: production
+    namespace: default
     image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
     port: 8080
     host: "{{ .Values.ingress.host }}"
@@ -30,6 +30,6 @@ spec:
   parameters:
     version: "13.4"
     size: small
-    namespace: production
+    namespace: default
   writeConnectionSecretToRef:
     name: {{ .Chart.Name }}
