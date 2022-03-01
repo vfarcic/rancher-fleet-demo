@@ -3,9 +3,9 @@
 apiVersion: devopstoolkitseries.com/v1alpha1
 kind: AppClaim
 metadata:
-  name: {{ .Chart.Name . }}
+  name: {{ .Chart.Name }}
 spec:
-  id: {{ .Chart.Name . }}
+  id: {{ .Chart.Name }}
   compositionSelector:
     matchLabels:
       type: backend-db
@@ -20,9 +20,9 @@ spec:
 apiVersion: devopstoolkitseries.com/v1alpha1
 kind: SQLClaim
 metadata:
-  name: {{ .Chart.Name . }}
+  name: {{ .Chart.Name }}
 spec:
-  id: {{ .Chart.Name . }}
+  id: {{ .Chart.Name }}
   compositionSelector:
     matchLabels:
       provider: "{{ .Values.db.provider }}"
@@ -32,4 +32,4 @@ spec:
     size: small
     namespace: production
   writeConnectionSecretToRef:
-    name: {{ .Chart.Name . }}
+    name: {{ .Chart.Name }}
